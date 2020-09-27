@@ -3,16 +3,13 @@
  (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.*/
 
 const findLongestWord = function (string) {
-  //   debugger;
   let words = string.split(' ');
-
   let wordLongest = '';
   let wordLength = 0;
-  for (let i = 0; i <= words.length; i += 1) {
+  for (let i = 0; i <= words.length - 1; i += 1) {
     if (words[i].length > wordLength) {
-      wordLength = word[i].length;
-      wordLongest = word[i];
-      //   console.log(wordLongest);
+      wordLength = words[i].length;
+      wordLongest = words[i];
     }
   }
   return wordLongest;
